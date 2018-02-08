@@ -21,20 +21,36 @@ $data=json_decode($datum, true);
 
 
 $sky=$data['weather'][0]['main'];
+//switch($sky):
+//    case 'Clouds':
+//        ?><!--<img src='clouds.jpeg'><br/>--><?php
+//        $sky=' Облочно';
+//        break;
+//    case 'Rain':
+//        ?><!--<img src='rain.jpg'><br/>--><?php
+//        $sky= 'Дождь';
+//        break;
+//    case 'Clear':
+//        ?><!--<img src='clear.jpg'><br/>--><?php
+//        $sky=' Ясно';
+//        break;
+//entch;
+
 switch($sky):
     case 'Clouds':
-        ?><img src='clouds.jpeg'><br/><?php
+        $a="clouds.jpeg";
         $sky=' Облочно';
         break;
     case 'Rain':
-        ?><img src='rain.jpg'><br/><?php
+        $a="rain.jpg";
         $sky= 'Дождь';
         break;
     case 'Clear':
-        ?><img src='clear.jpg'><br/><?php
+        $a="clear.jpg";
         $sky=' Ясно';
         break;
 endswitch;
+
  
  $tempData=$data['main']['temp'];
 $temp=null;
